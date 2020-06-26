@@ -3,12 +3,22 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+resources:
+  repositories:
+  - repository: BoostRepo
+    type: github
+    endpoint: GitHub
+    name: designboosters/boost
+    ref: refs/tags/boost-1.73.0
+
 trigger: none
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- checkout: BoostRepo
+
 - script: ./bootstrap.sh
   displayName: 'Bootstrap'
 
