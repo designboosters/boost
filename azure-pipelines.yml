@@ -12,5 +12,5 @@ steps:
 - script: ./bootstrap.sh
   displayName: 'Bootstrap'
 
-- script: b2
+- script: ./b2
   displayName: 'Build'
