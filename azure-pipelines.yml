@@ -9,7 +9,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: bootstrap.sh
+- script: ./bootstrap.sh
   displayName: 'Bootstrap'
 
 - script: b2
