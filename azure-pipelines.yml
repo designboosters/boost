@@ -4,7 +4,11 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+  tags:
+    include:
+      - '*'
+    exclude:
+      - '*.beta'
 
 pool:
   vmImage: 'ubuntu-latest'
